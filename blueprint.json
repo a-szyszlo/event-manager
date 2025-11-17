@@ -15,7 +15,7 @@
       "step": "installPlugin",
       "pluginData": {
         "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=a-szyszlo/event-manager"
+        "url": "https://codeload.github.com/a-szyszlo/event-manager/zip/refs/heads/main"
       },
       "options": {
         "activate": true
