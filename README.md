@@ -18,7 +18,7 @@ Kompatybilność: Testowane na środowisku deweloperskim z WordPress 6.6+ i PHP 
 - [Szybki start / Playground](#-szybki-start--playground)
 - [Konfiguracja](#-konfiguracja)
 - [Funkcjonalności](#-funkcjonalności)
-- [AJAX Endpoints](#-ajax-endpoints)
+- [Endpointy AJAX](#-endpointy-ajax)
 - [Struktura plików](#-struktura-plików)
 - [Bezpieczeństwo](#-bezpieczeństwo)
 - [Znane ograniczenia](#-znane-ograniczenia)
@@ -179,25 +179,25 @@ array(
 
 ---
 
-## 🔌 AJAX Endpoints
+## 🔌 Endpointy AJAX
 
-### Endpoint: `register_event`
+### Punkt końcowy: `register_event`
 
-Registers a participant for an event.
+Rejestruje uczestnika na wydarzenie.
 
-URL:
+Adres URL:
 ```
 /wp-admin/admin-ajax.php?action=register_event
 ```
 
-Method:
+Metoda:
 ```
 POST
 ```
 
-POST parameters:
+Parametry POST:
 
-| Param | Type | Required | Description |
+| Parametr | Typ | Wymagane | Opis |
 |-------|------|----------|-------------|
 | `action` | string | yes | `register_event` |
 | `nonce` | string | yes | Security token (`event_registration_nonce`) |
@@ -205,7 +205,7 @@ POST parameters:
 | `registration_name` | string | yes | Participant name |
 | `registration_email` | string | yes | Participant email |
 
-Success response (limit ustawiony):
+Odpowiedź sukcesu (limit ustawiony):
 
 ```json
 {
@@ -220,7 +220,7 @@ Success response (limit ustawiony):
 }
 ```
 
-Success response (brak limitu – `places_left` ma wartość null a `is_full` zawsze false):
+Odpowiedź sukcesu (brak limitu – `places_left` ma wartość null, a `is_full` zawsze false):
 
 ```json
 {
@@ -235,7 +235,7 @@ Success response (brak limitu – `places_left` ma wartość null a `is_full` za
 }
 ```
 
-Error responses (examples – komunikat w kluczu `message`, pole `code` zwracane tylko w części endpointów wyszukiwarki):
+Odpowiedzi błędów (przykłady – komunikat w kluczu `message`, pole `code` zwracane tylko w części endpointów wyszukiwarki):
 
 ```json
 { "success": false, "data": { "message": "Błąd bezpieczeństwa. Odśwież stronę i spróbuj ponownie." } }
@@ -255,21 +255,21 @@ Używane kody HTTP:
 - 409 – duplikat adresu e-mail lub osiągnięto limit miejsc
 - 500 – wewnętrzny błąd przy zapisie rejestracji
 
-### Endpoint: `event_search_ajax`
+### Punkt końcowy: `event_search_ajax`
 
-Fetch event list HTML based on filters.
+Zwraca HTML listy wydarzeń na podstawie filtrów.
 
-URL:
+Adres URL:
 ```
 /wp-admin/admin-ajax.php?action=event_search_ajax
 ```
 
-Method:
+Metoda:
 ```
 POST
 ```
 
-POST parameters:
+Parametry POST:
 
 | Param | Type | Required | Description |
 |-------|------|----------|-------------|
@@ -281,7 +281,7 @@ POST parameters:
 | `date_to` | string | no | End date (YYYY-MM-DD) |
 | `paged` | int | no | Page number (default 1) |
 
-Success response:
+Odpowiedź sukcesu:
 
 ```json
 {
@@ -295,7 +295,7 @@ Success response:
 }
 ```
 
-Empty results example (brak dopasowań):
+Przykład pustych wyników (brak dopasowań):
 
 ```json
 {
@@ -309,26 +309,26 @@ Empty results example (brak dopasowań):
 }
 ```
 
-Errors:
-- Invalid nonce → `{ success:false, data:{ message: "Błąd bezpieczeństwa.", code: "invalid_nonce" } }`
-- Invalid date format → `{ success:false, data:{ message: "Nieprawidłowy format daty." } }`
-- From date after to date → `{ success:false, data:{ message: "Data początkowa nie może być późniejsza." } }`
+Błędy:
+- Nieprawidłowy nonce → `{ success:false, data:{ message: "Błąd bezpieczeństwa.", code: "invalid_nonce" } }`
+- Nieprawidłowy format daty → `{ success:false, data:{ message: "Nieprawidłowy format daty." } }`
+- Data początkowa późniejsza niż końcowa → `{ success:false, data:{ message: "Data początkowa nie może być późniejsza." } }`
 
-### Endpoint: `event_search_nonce`
+### Punkt końcowy: `event_search_nonce`
 
-Return a fresh nonce for the search UI (used by the frontend to recover after back/forward cache or long idle times).
+Zwraca nowy nonce dla wyszukiwarki (używane na froncie m.in. po powrocie z cache przeglądarki lub dłuższej bezczynności).
 
-URL:
+Adres URL:
 ```
 /wp-admin/admin-ajax.php?action=event_search_nonce
 ```
 
-Method:
+Metoda:
 ```
 POST
 ```
 
-Response:
+Odpowiedź:
 
 ```json
 { "success": true, "data": { "nonce": "…" } }
