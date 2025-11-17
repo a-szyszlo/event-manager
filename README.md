@@ -3,7 +3,6 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![WordPress](https://img.shields.io/badge/WordPress-5.8%2B-blue)
 ![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple)
-![License](https://img.shields.io/badge/license-GPL--2.0-green)
 
 Wtyczka WordPress do zarządzania wydarzeniami i rejestracją uczestników z wykorzystaniem AJAX, Custom Post Types i Advanced Custom Fields.
 
@@ -403,15 +402,4 @@ Stworzone dla zadania rekrutacyjnego.
 
 ---
 
-## 🙏 Podziękowania
-
-- WordPress Team
-- Advanced Custom Fields (Delicious Brains)
-- Społeczność WordPress Polska
-
----
-
-**Wersja:** 1.0.0  
-**Ostatnia aktualizacja:** Listopad 2025
-# event-manager
 # event-manager
