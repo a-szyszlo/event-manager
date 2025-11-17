@@ -21,7 +21,7 @@ Kompatybilność: Testowane na środowisku deweloperskim z WordPress 6.6+ i PHP 
 - [Endpointy AJAX](#-endpointy-ajax)
 - [Struktura plików](#-struktura-plików)
 - [Bezpieczeństwo](#-bezpieczeństwo)
-- [Autor](#-autor)
+- [Autor](#autor)
 
 ---
 
