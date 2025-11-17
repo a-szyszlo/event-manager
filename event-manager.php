@@ -8,8 +8,8 @@
  * Author: Aleksandra Szyszło
  * Author URI: https://github.com/a-szyszlo
  * Text Domain: event-manager
- * Requires at least: 5.8
- * Requires PHP: 7.4
+ * Requires at least: 6.6
+ * Requires PHP: 8.3
  */
 
 // Prevent direct access

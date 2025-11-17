@@ -39,8 +39,8 @@ Kliknij w poniższy link, aby automatycznie załadować WordPress z wtyczką Eve
 
 ### Wymagania
 
-- WordPress 5.8+
-- PHP 7.4+
+- WordPress: latest 6.8.3+
+- PHP: 8.3+
 - Wtyczka ACF (Advanced Custom Fields)
 
 ### Kroki instalacji
@@ -92,7 +92,7 @@ Otwórz stronę i sprawdź czy:
 1. **Pobierz Local:** https://localwp.com/
 2. **Stwórz nową stronę:**
    - Nazwa: Event Manager Demo
-   - Environment: Preferowany (PHP 8.0+)
+   - Environment: Preferowany (PHP 8.3+)
 3. **Zainstaluj WordPress**
 4. **Wykonaj kroki z Metody 2**
 
