@@ -11,19 +11,12 @@ Kliknij w poniższy link, aby automatycznie załadować WordPress z wtyczką Eve
 **🔗 [Uruchom Event Manager w WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/a-szyszlo/event-manager/main/blueprint.json)**
 
 
-
-### Krok 2: Zaloguj się
-
-Po załadowaniu zobaczysz panel logowania WordPress:
-- **Login:** `admin`
-- **Hasło:** `password` (lub to co ustawiłeś w blueprincie)
-
-### Krok 3: Sprawdź czy wtyczka jest aktywna
+### Krok 2: Sprawdź czy wtyczka jest aktywna
 
 1. Przejdź do **Wtyczki** → **Zainstalowane wtyczki**
 2. Upewnij się, że **Event Manager** i **Advanced Custom Fields** są aktywne
 
-### Krok 4: Dodaj przykładowe wydarzenie
+### Krok 3: Dodaj przykładowe wydarzenie
 
 1. W menu kliknij **Wydarzenia** → **Dodaj nowe**
 2. Wypełnij:
@@ -34,7 +27,7 @@ Po załadowaniu zobaczysz panel logowania WordPress:
    - **Miasto:** Dodaj "Warszawa" w prawej kolumnie
 3. Kliknij **Opublikuj**
 
-### Krok 5: Zobacz wydarzenie na froncie
+### Krok 4: Zobacz wydarzenie na froncie
 
 1. Kliknij **Zobacz wydarzenie** lub
 2. Przejdź do `/wydarzenia/konferencja-wordpress-2025/`
@@ -136,17 +129,6 @@ Pełne wskazówki debugowania w `README.md`.
 
 ---
 
-## 🎨 Customizacja
-Podstawowe modyfikacje:
-
-- Style: edytuj `assets/css/style.css`.
-- Limit domyślny: w `includes/acf-fields.php` zmień `default_value` pola limitu.
-- Dodatkowe pola: dodaj w definicji grupy ACF (patrz `acf-fields.php`).
-
-Więcej przykładów w `README.md`.
-
----
-
 ## 🆘 Wsparcie
 
 Masz problem? Sprawdź:
@@ -165,44 +147,7 @@ define( 'WP_DEBUG_DISPLAY', false );
 
 Log znajdziesz w: `wp-content/debug.log`
 
----
-
-## ✅ Checklist po instalacji
-
-- [ ] WordPress 5.8+ zainstalowany
-- [ ] PHP 7.4+ aktywne
-- [ ] ACF zainstalowany i aktywny
-- [ ] Event Manager aktywny
-- [ ] Permalinki odświeżone
-- [ ] Menu "Wydarzenia" widoczne w adminie
-- [ ] Możesz dodać nowe wydarzenie
-- [ ] Pola ACF widoczne w edytorze
-- [ ] Event wyświetla się na froncie
-- [ ] Formularz działa (AJAX)
-- [ ] Rejestracja zapisuje się w bazie
-
----
-
 **Gotowe! Możesz teraz korzystać z Event Manager! 🎉**
-
----
-
-## 🔍 Dodanie strony wyszukiwarki
-
-Aby udostępnić użytkownikom wyszukiwarkę wydarzeń:
-
-1. Przejdź do **Strony** → **Dodaj nową**
-2. Tytuł: "Wyszukiwarka wydarzeń"
-3. W treści wstaw shortcode:
-
-```
-[event_search]
-```
-
-4. Opublikuj stronę
-5. Otwórz ją na froncie i przetestuj filtrowanie (miasto, zakres dat, słowo kluczowe, paginacja).
-
-Wyszukiwarka obsługuje pamięć stanu w adresie URL oraz automatyczne odświeżanie nonce.
 
 ## 🧪 Dodatkowe testy wyszukiwarki
 Szczegółowe testy (filtry, daty, paginacja, nonce) opisane są w `README.md`.
@@ -210,8 +155,3 @@ Szczegółowe testy (filtry, daty, paginacja, nonce) opisane są w `README.md`.
 ## 🗑️ Odinstalowanie
 
 Usunięcie wtyczki wywołuje `uninstall.php`, który czyści zapisane opcje (np. `event_manager_events_page_id`). Rejestracje w `post_meta` pozostają zachowane.
-
-## ℹ️ Informacje porządkowe
-
-- Legacy plik `ajax-handlers.php` został zastąpiony nową strukturą (`includes/ajax-registration.php`, `includes/ajax-search.php`, `includes/ajax.php`).
-- Komentarze w kodzie są po angielsku, komunikaty interfejsu dla użytkownika po polsku.
