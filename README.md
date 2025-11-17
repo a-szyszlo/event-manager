@@ -420,23 +420,3 @@ Stworzone dla zadania rekrutacyjnego.
 ---
 
 # event-manager
-
-## ▶️ Uruchom w WordPress Playground
-
-Możesz szybko przetestować wtyczkę w przeglądarce używając pliku `blueprint.json` (instaluje ACF i pobiera wtyczkę z GitHub):
-
-- Otwórz: https://playground.wordpress.net/
-- W menu wybierz „Open” → „From URL” i wklej URL zipa repo lub użyj „Import from GitHub” wskazując `a-szyszlo/event-manager`.
-- Alternatywnie, skopiuj zawartość `blueprint.json` do edytora po prawej i kliknij „Run”.
-
-Uwaga: Blueprint ma ustawione `features.networking: true`, aby umożliwić pobieranie z GitHub.
-
-### Troubleshooting
-- Jeśli pojawia się błąd pobierania z GitHub, spróbuj ponownie (chwilowe ograniczenia rate-limit lub CORS) lub odśwież Playground.
-- Upewnij się, że folder docelowy wtyczki to `event-manager` — blueprint wymusza to przez `options.targetFolderName`.
-- Gdy ACF się nie instaluje, uruchom blueprint ponownie; źródło ACF to `wordpress.org/plugins`.
-
-## Lokalnie (Local WP / dowolny WP)
-1. Skopiuj folder `event-manager` do `wp-content/plugins/`.
-2. Aktywuj wtyczkę w panelu `Wtyczki`.
-3. Zainstaluj i aktywuj „Advanced Custom Fields”.
