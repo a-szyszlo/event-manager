@@ -11,8 +11,12 @@
       "username": "admin"
     },
     {
+      "step": "runCommand",
+      "command": "curl -L https://github.com/a-szyszlo/event-manager/archive/refs/heads/main.zip -o /tmp/event-manager.zip"
+    },
+    {
       "step": "installPlugin",
-      "pluginSlug": "event-manager",
+      "pluginFilePath": "/tmp/event-manager.zip",
       "options": {
         "activate": true
       }
