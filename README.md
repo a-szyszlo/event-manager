@@ -15,6 +15,7 @@ Kompatybilność: Testowane na środowisku deweloperskim z WordPress 6.6+ i PHP 
 - [Opis](#-opis)
 - [Wymagania](#-wymagania)
 - [Instalacja](#-instalacja)
+- [Szybki start / Playground](#-szybki-start--playground)
 - [Konfiguracja](#-konfiguracja)
 - [Funkcjonalności](#-funkcjonalności)
 - [AJAX Endpoints](#-ajax-endpoints)
@@ -77,6 +78,20 @@ Po aktywacji wtyczki:
 - Zostanie utworzona taksonomia `city` (Miasta)
 - Zostaną odświeżone reguły permalink
 - W menu administracyjnym pojawi się pozycja "Wydarzenia"
+
+---
+
+## 🚀 Szybki start / Playground
+
+Chcesz szybko odpalić środowisko testowe w WordPress Playground z gotową wtyczką?
+
+Zobacz plik „INSTALL.md”, w którym opisałam krok po kroku jak uruchomić wtyczkę w Playground oraz lokalnie:
+
+- INSTALL: ./INSTALL.md
+
+Bezpośredni link (w repo):
+
+- https://github.com/a-szyszlo/event-manager/blob/main/INSTALL.md
 
 ---
 
