@@ -1,0 +1,505 @@
+/**
+ * Event Manager - Styles
+ * 
+ * Podstawowe style dla wtyczki Event Manager
+ */
+
+/* === CONTAINER === */
+.event-manager-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* === HEADER === */
+.event-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 20px;
+}
+
+.event-title {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+/* === META INFORMATION === */
+.event-meta {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 4px;
+}
+
+.event-meta-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.event-meta-item:last-child {
+    margin-bottom: 0;
+}
+
+.event-meta-label {
+    font-weight: 600;
+    margin-right: 10px;
+    color: #555;
+    min-width: 180px;
+}
+
+.event-meta-value {
+    color: #2c3e50;
+}
+
+/* === STATUS === */
+.event-status {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+.event-status-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.event-available .event-status-badge {
+    background: #d4edda;
+    color: #155724;
+}
+
+.event-full .event-status-badge {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* === CONTENT === */
+.event-content {
+    margin-top: 30px;
+}
+
+.event-thumbnail {
+    margin: 30px 0;
+}
+
+.event-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 30px 0;
+}
+
+.event-additional-description {
+    margin: 40px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    font-size:1rem;
+}
+
+.event-additional-description h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* === REGISTRATION SECTION === */
+.event-registration-section {
+    margin-top: 50px;
+    padding: 30px;
+    background: #ffffff;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.event-registration-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* === MESSAGES === */
+.registration-message {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.registration-message p {
+    margin: 0;
+}
+
+.registration-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.registration-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.registration-message.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* === FORM === */
+.event-registration-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.form-group .required {
+    color: #e74c3c;
+    margin-left: 3px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* === BUTTON === */
+.btn-submit {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-submit:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-loading {
+    display: inline-block;
+    margin-left: 15px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* === RESPONSIVENESS === */
+@media (max-width: 768px) {
+    .event-manager-wrapper {
+        padding: 20px 15px;
+    }
+
+    .event-title {
+        font-size: 1.8rem;
+    }
+
+    .event-meta {
+        padding: 15px;
+    }
+
+    .event-meta-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .event-meta-label {
+        margin-bottom: 5px;
+        min-width: auto;
+    }
+
+    .event-registration-section {
+        padding: 20px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        max-width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .form-loading {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.registration-message {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Hide theme featured image on single event to avoid duplicate header image */
+.single-event .wp-block-post-featured-image {
+    display: none !important;
+}
+
+/* === EVENT SEARCH === */
+.event-search-wrapper {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.event-search-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-field label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.search-field input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-field input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.search-btn {
+    padding: 12px 24px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: flex-end;
+}
+
+.search-btn:hover {
+    background: #2980b9;
+}
+
+.search-btn:active {
+    transform: scale(0.98);
+}
+
+/* === SEARCH RESULTS === */
+#event-search-results {
+    margin-top: 30px;
+}
+
+.event-search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event-result-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.event-result-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.event-result-item h3 {
+    margin: 0 0 12px 0;
+    font-size: 1.3rem;
+}
+
+.event-result-item h3 a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.event-result-item h3 a:hover {
+    text-decoration: underline;
+}
+
+.event-result-date {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.event-result-excerpt{
+    font-size: 1rem;
+}
+.event-search-no-results {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.event-result-img-wrapper {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    padding-right: 20px;
+}
+
+.event-result-img-wrapper img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* === PAGINATION === */
+.event-search-pagination {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.page-btn:hover:not(.active) {
+    background: #ecf0f1;
+}
+
+.page-btn.active {
+    background: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+/* === MESSAGES === */
+.loading {
+    text-align: center;
+    color: #3498db;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.error {
+    background: #ffe6e6;
+    color: #c0392b;
+    padding: 15px 20px;
+    border-radius: 4px;
+    border-left: 4px solid #c0392b;
+    font-weight: 600;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .event-search-wrapper {
+        padding: 20px;
+    }
+
+    .event-search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .search-btn {
+        align-self: stretch;
+    }
+
+    .event-search-results {
+        grid-template-columns: 1fr;
+    }
+}

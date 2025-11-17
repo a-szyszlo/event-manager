@@ -1,0 +1,24 @@
+# OS / system
+.DS_Store
+Thumbs.db
+
+# Logs & archives
+*.log
+*.zip
+
+# Editor / temp
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Dependencies (if added later)
+node_modules/
+vendor/
+
+# Environment files (if used)
+.env
+.env.local
+# IDEs
+
