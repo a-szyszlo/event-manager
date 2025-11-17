@@ -82,8 +82,23 @@
                 <p>Przepraszamy, wszystkie miejsca zostały zajęte.</p>
             </div>
         <?php else : ?>
+            <?php
+            // Compute places left for JS hints
+            $places_left_local = null;
+            if ( ! empty( $participant_limit_local ) ) {
+                $places_left_local = max( (int) $participant_limit_local - (int) $current_registrations_local, 0 );
+            }
+            ?>
             <div id="registration-message" class="registration-message" style="display: none;"></div>
-            <form id="event-registration-form" class="event-registration-form" method="post">
+            <form
+                id="event-registration-form"
+                class="event-registration-form"
+                method="post"
+                data-is-full="<?php echo ! empty( $is_full_local ) ? 'true' : 'false'; ?>"
+                <?php if ( $places_left_local !== null ) : ?>
+                    data-places-left="<?php echo esc_attr( (string) $places_left_local ); ?>"
+                <?php endif; ?>
+            >
                 <div class="form-group">
                     <label for="registration-name">Imię: <span class="required">*</span></label>
                     <input

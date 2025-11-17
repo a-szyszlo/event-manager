@@ -18,6 +18,27 @@
             return;
         }
 
+        // Helpers
+        function disableForm() {
+            $form.find('input, button, select, textarea').prop('disabled', true);
+            $form.addClass('is-disabled');
+        }
+
+        // Lock if full on initial load via data attributes provided by template
+        (function lockIfFullOnLoad(){
+            var isFullAttr = $form.attr('data-is-full');
+            var placesLeftAttr = $form.attr('data-places-left');
+            var isFull = (isFullAttr === 'true');
+            var placesLeft = (typeof placesLeftAttr !== 'undefined' && placesLeftAttr !== null && placesLeftAttr !== '') ? parseInt(placesLeftAttr, 10) : null;
+            if (isFull || placesLeft === 0) {
+                disableForm();
+                var $msg = $('#registration-message');
+                if ($msg.length) {
+                    $msg.removeClass('success info').addClass('error').html('<p>Przepraszamy, wszystkie miejsca są już zajęte.</p>').show();
+                }
+            }
+        })();
+
         /**
          * Handle form submission
          */
@@ -67,6 +88,10 @@
                 return;
             }
 
+            // Optimistic lock: if template tells us only 1 place left, prevent rapid double-submit (we already disable submit below)
+            var placesLeftAttr = $form.attr('data-places-left');
+            var placesLeftBefore = (typeof placesLeftAttr !== 'undefined' && placesLeftAttr !== null && placesLeftAttr !== '') ? parseInt(placesLeftAttr, 10) : null;
+
             // Disable button during submission
             $submitBtn.prop('disabled', true);
             $loading.show();
@@ -94,12 +119,21 @@
                             updateParticipantCount(response.data.current_count);
                         }
 
-                        // If event is full, hide form
-                        if (response.data.is_full) {
+                        // If last seat was taken -> immediately lock and reload shortly
+                        if (response.data && (response.data.is_full === true || response.data.places_left === 0)) {
+                            // Update state so future checks reflect full status
+                            $form.attr('data-is-full', 'true');
+                            $form.attr('data-places-left', '0');
+                            disableForm();
                             setTimeout(function() {
-                                $form.fadeOut();
-                                showMessage('Wydarzenie jest pełne. Wszystkie miejsca są zajęte.', 'info');
-                            }, 3000);
+                                try { window.location.reload(); } catch (e) {}
+                            }, 800);
+                            return;
+                        }
+
+                        // Update cached places_left from response if present
+                        if (response.data && typeof response.data.places_left !== 'undefined' && response.data.places_left !== null) {
+                            $form.attr('data-places-left', String(response.data.places_left));
                         }
 
                     } else {
@@ -138,13 +172,6 @@
                 }
             });
         });
-
-        /**
-         * Display message
-         * 
-         * @param {string} message - Message content
-         * @param {string} type - Type: success, error, info
-         */
         function showMessage(message, type) {
             var $messageBox = $('#registration-message');
             
