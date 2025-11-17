@@ -1,12 +1,12 @@
 # Event Manager
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![WordPress](https://img.shields.io/badge/WordPress-latest-blue)
-![PHP](https://img.shields.io/badge/PHP-8.3%2B-purple)
+![WordPress](https://img.shields.io/badge/WordPress-6.6%2B-blue)
+![PHP](https://img.shields.io/badge/PHP-8.0%2B-purple)
 
 Wtyczka WordPress do zarządzania wydarzeniami i rejestracją uczestników z wykorzystaniem AJAX, Custom Post Types i Advanced Custom Fields.
 
-Kompatybilność: Przetestowana na najnowszym WordPress (latest) i PHP 8.3 (Playground). Minimalne wymagania pozostają bez zmian – patrz sekcja „Wymagania”.
+Kompatybilność: Testowane na środowisku deweloperskim z WordPress 6.6+ i PHP 8.0+. Szczegóły w sekcji „Wymagania”.
 
 ---
 
@@ -40,8 +40,8 @@ Kompatybilność: Przetestowana na najnowszym WordPress (latest) i PHP 8.3 (Play
 ## 🔧 Wymagania
 
 ### Środowisko
-- **WordPress:** latest (przetestowano na najnowszym WordPress – Playground)
-- **PHP:** 8.3+
+- **WordPress:** 6.6+
+- **PHP:** 8.0+
 - **MySQL:** 5.7+ lub MariaDB 10.2+
 
 ### Wtyczki wymagane

@@ -9,7 +9,7 @@
  * Author URI: https://github.com/a-szyszlo
  * Text Domain: event-manager
  * Requires at least: 6.6
- * Requires PHP: 8.3
+ * Requires PHP: 8.0
  */
 
 // Prevent direct access
