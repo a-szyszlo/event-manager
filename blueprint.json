@@ -15,14 +15,26 @@
     },
 
     {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=a-szyszlo/event-manager"
-      },
-      "options": {
-        "activate": true
-      }
+      "step": "fetch",
+      "uri": "https://github.com/a-szyszlo/event-manager/archive/refs/heads/main.zip",
+      "dest": "/tmp/event-manager.zip"
+    },
+
+    {
+      "step": "extract",
+      "zip": "/tmp/event-manager.zip",
+      "to": "/wp-content/plugins/"
+    },
+
+    {
+      "step": "mv",
+      "from": "/wp-content/plugins/event-manager-main",
+      "to": "/wp-content/plugins/event-manager"
+    },
+
+    {
+      "step": "activatePlugin",
+      "plugin": "event-manager/event-manager.php"
     },
 
     {
@@ -33,23 +45,6 @@
       },
       "options": {
         "activate": true
-      }
-    },
-
-    {
-      "step": "defineWpConfigConsts",
-      "consts": {
-        "WP_DEBUG": true,
-        "WP_DEBUG_LOG": true,
-        "WP_DEBUG_DISPLAY": false
-      }
-    },
-
-    {
-      "step": "setSiteOptions",
-      "options": {
-        "blogname": "Event Manager Demo",
-        "blogdescription": "Demo wtyczki Event Manager"
       }
     }
   ]
