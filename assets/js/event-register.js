@@ -94,12 +94,13 @@
                             updateParticipantCount(response.data.current_count);
                         }
 
-                        // If event is full, hide form
-                        if (response.data.is_full) {
+                        // If event is full (last seat just taken), reload the page to reflect final state
+                        if (response.data.is_full === true || response.data.places_left === 0) {
+                            // Give user a short success feedback, then reload
                             setTimeout(function() {
-                                $form.fadeOut();
-                                showMessage('Wydarzenie jest pełne. Wszystkie miejsca są zajęte.', 'info');
-                            }, 3000);
+                                try { window.location.reload(); } catch (e) { /* noop */ }
+                            }, 1500);
+                            return;
                         }
 
                     } else {
