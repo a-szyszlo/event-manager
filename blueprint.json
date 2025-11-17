@@ -10,18 +10,13 @@
       "step": "login",
       "username": "admin"
     },
-
     {
       "step": "installPlugin",
-      "pluginZipFile": {
-        "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=a-szyszlo/event-manager&workflow=zip"
-      },
+      "pluginSlug": "event-manager",
       "options": {
         "activate": true
       }
     },
-
     {
       "step": "installPlugin",
       "pluginSlug": "advanced-custom-fields",
