@@ -5,25 +5,32 @@
     "php": "8.0",
     "wp": "latest"
   },
+  "features": {
+    "networking": true
+  },
   "steps": [
     {
       "step": "login",
       "username": "admin"
     },
     {
-      "step": "runCommand",
-      "command": "curl -L https://github.com/a-szyszlo/event-manager/archive/refs/heads/main.zip -o /tmp/event-manager.zip"
-    },
-    {
       "step": "installPlugin",
-      "pluginFilePath": "/tmp/event-manager.zip",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://github.com/a-szyszlo/event-manager/archive/refs/heads/main.zip",
+        "caption": "Pobieranie i instalacja event-manager"
+      },
       "options": {
-        "activate": true
+        "activate": true,
+        "targetFolderName": "event-manager"
       }
     },
     {
       "step": "installPlugin",
-      "pluginSlug": "advanced-custom-fields",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "advanced-custom-fields"
+      },
       "options": {
         "activate": true
       }
