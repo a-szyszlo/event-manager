@@ -411,7 +411,7 @@ Wtyczka implementuje następujące zabezpieczenia:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Stworzone dla zadania rekrutacyjnego.
 
