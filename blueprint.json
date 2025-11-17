@@ -13,9 +13,9 @@
 
     {
       "step": "installPlugin",
-      "pluginData": {
+      "pluginZipFile": {
         "resource": "url",
-        "url": "https://codeload.github.com/a-szyszlo/event-manager/zip/refs/heads/main"
+        "url": "https://github-proxy.com/proxy/?repo=a-szyszlo/event-manager&workflow=zip"
       },
       "options": {
         "activate": true
@@ -24,10 +24,7 @@
 
     {
       "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "advanced-custom-fields"
-      },
+      "pluginSlug": "advanced-custom-fields",
       "options": {
         "activate": true
       }

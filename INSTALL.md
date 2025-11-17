@@ -8,7 +8,7 @@ WordPress Playground to darmowe środowisko testowe WordPress działające w prz
 
 Kliknij w poniższy link, aby automatycznie załadować WordPress z wtyczką Event Manager:
 
-**🔗 [Uruchom Event Manager w WordPress Playground](https://playground.wordpress.net/#https://raw.githubusercontent.com/a-szyszlo/event-manager/main/blueprint.json)**
+**🔗 [Uruchom Event Manager w WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/a-szyszlo/event-manager/main/blueprint.json)**
 
 
 
