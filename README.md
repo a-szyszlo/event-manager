@@ -12,18 +12,16 @@ Kompatybilność: Testowane na środowisku deweloperskim z WordPress 6.6+ i PHP 
 
 ## 📋 Spis treści
 
-- [Opis](#-opis)
-- [Wymagania](#-wymagania)
-- [Instalacja](#-instalacja)
-- [Szybki start / Playground](#-szybki-start--playground)
-- [Konfiguracja](#-konfiguracja)
-- [Funkcjonalności](#-funkcjonalności)
-- [Endpointy AJAX](#-endpointy-ajax)
-- [Struktura plików](#-struktura-plików)
-- [Bezpieczeństwo](#-bezpieczeństwo)
-- [Znane ograniczenia](#-znane-ograniczenia)
-- [TODO / Rozwój](#-todo--rozwój)
-- [Wsparcie](#-wsparcie)
+- [Opis](#opis)
+- [Wymagania](#wymagania)
+- [Instalacja](#instalacja)
+- [Szybki start / Playground](#szybki-start--playground)
+- [Konfiguracja](#konfiguracja)
+- [Funkcjonalności](#funkcjonalności)
+- [Endpointy AJAX](#endpointy-ajax)
+- [Struktura plików](#struktura-plików)
+- [Bezpieczeństwo](#bezpieczeństwo)
+- [Autor](#autor)
 
 ---
 
