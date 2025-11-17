@@ -5,9 +5,6 @@
     "php": "8.0",
     "wp": "latest"
   },
-  "features": {
-    "networking": true
-  },
   "steps": [
     {
       "step": "login",
@@ -15,26 +12,14 @@
     },
 
     {
-      "step": "fetch",
-      "uri": "https://github.com/a-szyszlo/event-manager/archive/refs/heads/main.zip",
-      "dest": "/tmp/event-manager.zip"
-    },
-
-    {
-      "step": "extract",
-      "zip": "/tmp/event-manager.zip",
-      "to": "/wp-content/plugins/"
-    },
-
-    {
-      "step": "mv",
-      "from": "/wp-content/plugins/event-manager-main",
-      "to": "/wp-content/plugins/event-manager"
-    },
-
-    {
-      "step": "activatePlugin",
-      "plugin": "event-manager/event-manager.php"
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://github-proxy.com/proxy/?repo=a-szyszlo/event-manager"
+      },
+      "options": {
+        "activate": true
+      }
     },
 
     {
