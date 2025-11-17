@@ -13,6 +13,18 @@
       "step": "login",
       "username": "admin"
     },
+
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://github-proxy.com/proxy/?repo=a-szyszlo/event-manager"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+
     {
       "step": "installPlugin",
       "pluginData": {
@@ -23,6 +35,7 @@
         "activate": true
       }
     },
+
     {
       "step": "defineWpConfigConsts",
       "consts": {
@@ -31,6 +44,7 @@
         "WP_DEBUG_DISPLAY": false
       }
     },
+
     {
       "step": "setSiteOptions",
       "options": {
